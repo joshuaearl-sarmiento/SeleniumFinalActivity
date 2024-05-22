@@ -92,7 +92,6 @@ public class InputFormsTests extends BaseTest {
         }
 //        else if (method.getName().equals("methodName")) {
 //            sheetName = "sheetName";
-
 //        }// Add more conditions for other test methods as needed
         return ExcelUtils.readExcel(System.getProperty("user.dir")
                 + "/src/test/java/Data/InputFormData.json", sheetName);

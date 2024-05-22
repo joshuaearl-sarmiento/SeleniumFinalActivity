@@ -73,14 +73,14 @@ public class BaseTest {
         File source = ts.getScreenshotAs(OutputType.FILE);
         File file = new File(System.getProperty("user.dir")+"/src/reports/"+testCaseName+" - FAILED.png");
         FileUtils.copyFile(source,file);
-        return System.getProperty("user.dir")+"/reports/"+testCaseName+".png";
+        return "/SeleniumFinalActivity/src/reports/"+testCaseName+" - FAILED.png";
     }
     public String getPassedScreenshot(String testCaseName, WebDriver driver) throws IOException {
         TakesScreenshot ts = (TakesScreenshot)driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         File file = new File(System.getProperty("user.dir")+"/src/reports/"+testCaseName+" - PASSED.png");
         FileUtils.copyFile(source,file);
-        return System.getProperty("user.dir")+"/reports/"+testCaseName+".png";
+        return "/SeleniumFinalActivity/src/reports/"+testCaseName+" - PASSED.png";
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -95,7 +95,8 @@ public class BaseTest {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown(){
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(5000);
         driver.quit();
     }
 

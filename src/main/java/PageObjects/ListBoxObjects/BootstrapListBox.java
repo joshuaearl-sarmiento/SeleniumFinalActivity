@@ -60,7 +60,7 @@ public class BootstrapListBox extends AbstractComponent {
 
             //Check if all contents on the original list are on the new list
             for(int i=0; i<originalRightList.size(); i++){
-                System.out.println(originalRightList.get(i));
+//                System.out.println(originalRightList.get(i));
                 Assert.assertTrue(currentLeftList.contains(originalRightList.get(i)));
             }
         }catch (Exception e){

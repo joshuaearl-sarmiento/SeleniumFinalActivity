@@ -13,14 +13,6 @@ public class AjaxFormSubmit extends AbstractComponent {
 
     WebDriver driver;
 
-    //AJAX FORM SUBMIT
-    String firstName = "Shoyou";
-    String lastName = "Hinata";
-    String projectDescription = "Volleyball Nationals";
-
-    //JQUERY SEARCH DEMO
-    String country = "Jap";
-
     public AjaxFormSubmit(WebDriver driver) {
         super(driver);
         //Initialization
